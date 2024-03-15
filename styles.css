@@ -1,0 +1,672 @@
+/* Your CSS styles here */
+html {
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* pastel white */
+    overflow-x: hidden; /* Prevents horizontal overflow */
+    position: relative; /* Needed for footer positioning */
+    min-height: 100vh; /* Ensures full height of viewport */
+}
+
+header {
+    background-color: #ffd9e6; /* pastel pink */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.store-logo {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.search-bar {
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+
+.search-bar {
+    margin-left: 20px; /* Add space between title and search bar */
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #ffffff; /* pastel pink */
+    border-color:#c3c3c3;
+    border-radius: 25px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #fffcfc; /* lighter shade of pastel pink */
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px; /* Decrease the font size */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px; /* Decrease the margin */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px; /* Decrease the margin */
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px; /* Decrease the font size */
+}
+
+.search-bar {
+    margin-top: 10px; /* Decrease the margin */
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px; /* Decrease the padding */
+    width: 200px; /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Adjust the border radius as needed */
+    font-size: 14px; /* Decrease the font size */
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 8px 15px; /* Decrease the padding */
+    background-color: #fffbfb; /* pastel pink */
+    border-color:3c3c3c3;
+    border-radius: 20px; /* Adjust the border radius as needed */
+    color: rgb(0, 0, 0);
+    font-size: 14px; /* Decrease the font size */
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #cfdee7; /* lighter shade of pastel pink */
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Needed for z-index */
+    z-index: 0; /* Ensure sections stay behind images */
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.categories {
+    height: 400px; /* Adjust the height as needed */
+}
+
+.categories ul {
+    list-style-type: none;
+    padding: 10;
+    position: relative; /* Needed for z-index */
+    z-index: 1; /* Ensure categories stay above images */
+}
+
+.categories ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.categories ul li a {
+    color: #333;
+    background-color: #fffefe; /* pastel pink */
+    text-decoration: none; 
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.categories ul li a:hover {
+    background-color:pink; /* lighter shade of pastel pink */
+    border-color:#fff ; /* Change border color on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: pink;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: auto;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: pink; /* pastel pink */
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffb3b3; /* lighter shade of pastel pink */
+}
+.customization-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.customization-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.custom-box {
+    background-color: #ff6666; /* Change color according to your theme */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 300px; /* Adjust width as needed */
+}
+
+.custom-box a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.custom-box i {
+    margin-right: 10px; /* Adjust spacing between icon and text */
+}
+
+.custom-box:hover {
+    background-color: #ff3333; /* Change color on hover */
+}
+/* Updated CSS for box styling */
+.box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Updated CSS for toppings and extras */
+.toppings-container,
+.extras-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topping-item,
+.extra-item {
+    flex: 0 0 50%; /* Two items per row */
+}
+
+@media (max-width: 500px) {
+    .topping-item,
+    .extra-item {
+        flex: 0 0 100%; /* Single item per row on smaller screens */
+    }
+}
+
+
+.featured-products {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.product {
+    width: 30%;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.product p {
+    color: #777;
+    font-size: 16px;
+    text-decoration: none;
+}
+/* Remove underline from links in the "Products" section */
+.product a {
+    text-decoration: none; /* Remove underline */
+}
+
+
+.product button {
+    padding: 10px 20px;
+    background-color: #ff9999; /* pastel pink */
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #ff6666; /* lighter shade of pastel pink */
+
+}
+
+footer {
+    background-color: #ffff99; /* pastel yellow */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sliding-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.sliding-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.sliding-images img.active {
+    opacity: 0.7;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* pastel white with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.image-overlay h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.image-overlay p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+
+.sliding-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.7; /* Initially hide images */
+    animation: fadeImages 5s infinite; /* Adjust duration as needed */
+}
+
+@keyframes fadeImages {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: pink;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: pink;
+}
+
+.sliding-images {
+    position: absolute; /* Change to absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.sliding-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%\;
+    transition: opacity 5s ease-in-out;
+    opacity: 0.7;
+}
+
+.sliding-images img.active {
+    opacity: 0.7;
+}
+.product img {
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    margin-bottom: 10px; /* Add margin to separate images from other content */
+}
+
+.discount-offers {
+    position: relative;
+}
+
+.offer-image {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7; 
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.overlay-text h2 {
+    font-size: 3em; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    font-size: 1.5em; /* Adjust as needed */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.overlay-text button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em; /* Adjust as needed */
+    cursor: pointer;
+}
+
+.overlay-text button:hover {
+    background-color: #ff4500;
+}
+
+.featured-products {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0; /* Adjust padding as needed */
+    color: #fff; /* Set text color to contrast with background */
+    text-decoration: none;
+}
+.categories h2 {
+    color: #fff; /* Set text color to white */
+}
+
+.categories h2 i {
+    color: #fff; /* Set icon color to white */
+}
+.store-logo {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.nav-item {
+    border: 2px solid #c3c3c3; /* Set border color to pink */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    padding: 5px 10px; /* Add padding to create space around the links */
+}
+
+.nav-item a {
+    color: #000000;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.nav-item:hover {
+    background-color: #cfdee7; /* Change background color on hover */
+}
+.discount-offers {
+    position: relative;
+    background-color: #ffd9e6; /* pastel pink */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.offer-image {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #333; /* dark text color */
+}
+
+.overlay-text h2 {
+    font-size: 2em; /* Adjust as needed */
+    margin-bottom: 10px;
+    color: #333; /* dark text color */
+}
+
+.overlay-text p {
+    font-size: 1.2em; /* Adjust as needed */
+    margin-bottom: 20px;
+    color: #555; /* slightly darker text color */
+}
+
+.overlay-text button {
+    padding: 10px 20px;
+    background-color: #ff9999; /* pastel pink */
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* white text color */
+    font-size: 1.2em; /* Adjust as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.overlay-text button:hover {
+    background-color: #ff6666; /* lighter shade of pastel pink */
+}
+#newsletter {
+    background-color: #ffd9e6; /* pastel pink */
+    padding: 40px 20px;
+    text-align: center;
+    color: #333; /* dark text color */
+}
+
+#newsletter h2 {
+    font-size: 2em; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+#newsletter p {
+    font-size: 1.2em; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+#newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#newsletter input[type="email"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#newsletter button {
+    padding: 10px 20px;
+    background-color: #ff9999; /* pastel pink */
+    border: none;
+    border-radius: 25px;
+    color: #fff; /* white text color */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newsletter button:hover {
+    background-color: #ff6666; /* lighter shade of pastel pink */
+}
+.cart-item img {
+    max-width: 10%; /* Set maximum width to 100% */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+
+
+

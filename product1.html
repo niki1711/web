@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #f3f3f3; /* Soft gray background */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #fff; /* White background */
+            border-radius: 50px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .swiper-slide img {
+            height: 300px; /* Adjust the height as needed */
+        }
+        .description {
+    
+            width: calc(50% - 10px);
+            vertical-align: center;
+            border-radius: 10px;
+        }
+        .description {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the box horizontally */
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+.reviews {
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the box horizontally with some margin at the top */
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.details {
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the box horizontally with some margin at the top */
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+        .reviews {
+            margin-top: 20px;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        .prices {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .buy-options {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff9999; /* pastel pink */
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff6666; /* lighter shade of pastel pink */
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .navigation a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        .related-products {
+            margin-top: 40px;
+        }
+        .related-products h2 {
+            text-align: center;
+        }
+        .related-product {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+            .related-product {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .related-product img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .related-product .product-info {
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #f3f3f3; /* Soft gray background */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #fff; /* White background */
+            border-radius: 50px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Other styles */
+        .recipe {
+            border: 2px solid #ccc; /* Border style */
+            padding: 20px; /* Padding inside the box */
+            border-radius: 10px; /* Rounded corners */
+            width: 80%; /* Adjust the width as needed */
+            margin: 20px auto; /* Center the box horizontally with some margin at the top */
+            background-color: #fff; /* White background */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+
+    </style>
+</head>
+<body style="background-image: url('background2.jpg'); background-size: cover;">
+    <!-- Your HTML content goes here -->
+</body>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-cookie"></i> VANILLA DELIGHT</h1>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="vanilla.jpg" alt="Product Image"></div>
+                <div class="swiper-slide"><img src="vanilla2.jpg" alt="Product Image"></div>
+                <div class="swiper-slide"><img src="vanilla3.jpg" alt="Product Image"></div>
+
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="description">
+            <h2><i class="fas fa-info-circle"></i> Description</h2>
+            <p>
+
+                "Vanilla ice cream is a classic and beloved dessert known for its smooth and creamy texture, as well as its rich and indulgent flavor. Made with a base of cream, milk, sugar, and vanilla extract, this timeless treat offers a simple yet delightful taste that appeals to people of all ages. Whether enjoyed on its own, paired with a warm dessert like apple pie, or used as a topping for various sweet treats, vanilla ice cream is a versatile and universally loved dessert that never goes out of style."</p>
+        </div>
+        <div class="reviews">
+            <h2><i class="fas fa-star"></i> Reviews</h2>
+            <p>
+                    <b>1. John D.<br></b>
+                   - Rating: 5/5<br>
+                   - Review: "Absolutely delicious! The vanilla ice cream from this shop is hands down the best I've ever tasted. It's so creamy and full of flavor. I could eat it every day!"<br><br>
+                
+                   <b>2. Emily S.<br></b>
+                   - Rating: 4/5<br>
+                   - Review: "Great vanilla ice cream! It has a rich and creamy texture with just the right amount of sweetness. My only complaint is that I wish there were more flavor options available."<br><br>
+                
+                   <b>3. Michael P.<br></b>
+                   - Rating: 5/5<br>
+                   - Review: "Vanilla ice cream done right! It's smooth, creamy, and bursting with real vanilla flavor. My family loves it, and it's always a hit at our gatherings."<br><br>
+
+        </div>
+        <div class="details">
+            <h2><i class="fas fa-clipboard-list"></i> Product Details</h2>
+            <ul>
+                <i class="fas fa-tag"></i>  <strong>Brand:</strong> Icy<br><br>
+                <i class="fas fa-barcode"></i>  <strong>Product Code:</strong> Product 18<br><br>
+                <i class="fas fa-gift"></i>  <strong>Reward Points:</strong> 800<br><br>
+                <i class="fas fa-box"></i>  <strong>Product Available In Stock:</strong> 500<br><br>
+                <i class="fas fa-dollar-sign"></i>  <strong>Price:</strong> Rs.150<br><br>
+            </ul>
+        </div>
+        <div class="buy-options">
+           <a> <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            <button><i class="fas fa-shopping-cart"></i> Buy Now</button></a>
+        </div>
+        <div class="recipe">
+            <h2><i class="fas fa-utensils"></i> Recipe</h2>
+            <p>Here's how to make delicious vanilla ice cream:</p>
+            <ul>
+                <li>Mix cream, milk, sugar, and vanilla extract in a bowl.</li>
+                <li>Churn the mixture in an ice cream maker until it reaches the desired consistency.</li>
+                <li>Transfer the ice cream to a container and freeze for several hours.</li>
+                <li>Scoop and serve with your favorite toppings!</li>
+            </ul>
+        </div>
+        <div class="navigation">
+            <a href="index.html"><i class="fas fa-home"></i> Home Page</a> <!-- Link to home page -->
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a> <!-- Link to contact page -->
+            <!-- Add more links as needed -->
+        </div>
+        <div class="related-products">
+            <h2><i class="fas fa-utensils"></i> Related Products</h2>
+            <div class="related-product">
+                <img src="nut.jpg" alt="Hazelnut Ice Cream Scoop">
+                <div class="product-info">
+                    <h3>Hazelnut Ice Cream Scoop</h3>
+                    <p>Rs.175  <del>Rs.200</del></p>
+                    <button><i class="fas fa-cart-plus"></i> ADD TO CART</button>
+                </div>
+            </div>
+            <div class="related-product">
+                <img src="banana.jpg" alt="Banana Cream Ice Cream">
+                <div class="product-info">
+                    <h3>Banana Cream Ice Cream</h3>
+                    <p>Rs.299  <del> Rs.499</del></p>
+                    <button><i class="fas fa-cart-plus"></i> ADD TO CART</button>
+                </div>
+            </div>
+            <!-- Add more related products as needed -->
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            preventInteractionOnTransition: true // Prevent page scrolling during transition
+        });
+    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Select all add-to-cart buttons
+                const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    
+                // Add event listener to each button
+                addToCartButtons.forEach(button => {
+                    button.addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent default action of the button
+                        
+                        // Get product details
+                        const product = this.closest('.container');
+                        const productName = product.querySelector('h1').innerText;
+                        const productPrice = product.querySelector('.prices p').innerText.trim(); // Selecting price using .prices p
+    
+                        // Add product to cart (This is just a placeholder, you'll need to implement actual cart logic)
+                        addToCart(productName, productPrice);
+    
+                        // Redirect to checkout page
+                        window.location.href = 'checkout.html';
+                    });
+                });
+    
+                // Function to add product to cart
+                function addToCart(name, price) {
+                    // Placeholder function for adding product to cart
+                    console.log('Added to cart:', name, price);
+                    // Here you would implement the actual logic to add the product to the cart
+                }
+            });
+        </script>
+        
+
+</body>
+</html>

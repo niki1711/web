@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        /* Add your payment page styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #ff9999;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body style="background-image: url('background2.jpg'); background-size: cover;">
+    <!-- Your HTML content goes here -->
+</body>
+<body>
+    <div class="container">
+        <h1>Payment Details</h1>
+        <form action="confirm.html" method="post">
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="creditCard">Credit Card</option>
+                <option value="cashOnDelivery">Cash on Delivery</option>
+                <option value="upi">UPI</option>
+                <option value="phone">Phone Number</option>
+            </select>
+
+            <div id="creditCardFields" class="paymentFields">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+
+                <label for="expiry">Expiry Date:</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="number" id="cvv" name="cvv" min="100" max="999" required>
+
+                <label for="name">Cardholder's Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div id="cashOnDeliveryFields" class="paymentFields" style="display: none;">
+                <p>You will pay by cash when your order is delivered.</p>
+            </div>
+
+            <div id="upiFields" class="paymentFields" style="display: none;">
+                <label for="upiId">UPI ID:</label>
+                <input type="text" id="upiId" name="upiId" required>
+            </div>
+
+            <div id="phoneFields" class="paymentFields" style="display: none;">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+
+            <a href="confirm.html" id="payNowButton"><input type="button" value="Pay Now"></a>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('paymentMethod').addEventListener('change', function() {
+            var paymentMethod = this.value;
+            var paymentFields = document.querySelectorAll('.paymentFields');
+            for (var i = 0; i < paymentFields.length; i++) {
+                paymentFields[i].style.display = 'none';
+            }
+            document.getElementById(paymentMethod + 'Fields').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

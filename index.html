@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ice-scoop - Ice Cream And Drink Store</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: center; /* Align items in the center */
+            flex-wrap: wrap;
+        }
+        .promo-section {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .promo-section div {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #444; /* Add border */
+            border-radius: 10px; /* Optional: Add border radius */
+        }
+        .info-section{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1 1 48%; /* Adjust width for side by side */
+        }
+        .info-section li {
+            margin-bottom: 10px;
+        }
+        .info-section div {
+            margin-bottom: 20px; /* Add margin between sections */
+        }
+        .social-media-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-media-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+        .customization-dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .dropdown-btn {
+            background-color: #ff6b6b; /* Vibrant color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px; /* Rounded corners */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #ff5252; /* Darker shade on hover */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 210px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ff6b6b; /* Lighter shade on hover */
+        }
+
+        .customization-dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-image: url('background2.jpg');">
+        <div class="header-content">
+            <img src="logo.jpg" alt="Ice-scoop logo" class="store-logo"> <!-- Replace "your_store_logo.png" with the path to your store logo image file -->
+            <div class="search-bar">
+                <input type="text" placeholder="Find your delight here..." id="searchInput">
+                <button onclick="searchProducts()" ><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="nav-item"><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li class="nav-item"><a href="cart.html"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+                <li class="nav-item"><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>              
+    </header>
+
+<section class="categories">
+    <h2><i class="fas fa-utensils"></i> POPULAR CATEGORIES</h2>
+    <ul>
+        <li class="dropdown">
+            <a href="#"><i class="fas fa-ice-cream"></i> Ice Cream</a>
+            <div class="dropdown-content">
+                <a href="vanilla.html">Vanilla</a>
+                <a href="chocolate.html">Chocolate</a>
+                <a href="strawberry.html">Strawberry</a>
+                <a href="mintchochip.html">Mint Chocolate Chip</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fas fa-cocktail"></i> Drinks</a>
+            <div class="dropdown-content">
+                <a href="smoothie.html">Smoothies</a>
+                <a href="milkshake.html">Milkshakes</a>
+                <a href="juices.html">Juices</a>
+                <a href="icedcoffee.html">Iced Coffee</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fas fa-cookie"></i> Waffles</a>
+            <div class="dropdown-content">
+                <a href="chocochip.html">Chocochip</a>
+                <a href="oreo.html">Oreo Dip </a>
+                <a href="caramel.html">Salted Caramel</a>
+                <a href="banana.html">Banana Split</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#"><i class="fas fa-birthday-cake"></i> Cakes</a>
+            <div class="dropdown-content">
+                <a href="blueberry.html">Bluberry Cheesecake</a>
+                <a href="hazelnut.html">Hazelnut Blast</a>
+                <a href="freshfruit.html">Fresh Fruit</a>
+                <a href="cookies.html">Cookies N Cream</a>
+            </div>
+        </li>
+    </ul>
+</section>
+
+
+<!-- Sliding Images -->
+<section class="sliding-images">
+    <div class="image-container">
+        <img src="image4.jpg" alt="Image 1">
+        <img src="image1.jpg" alt="Image 2">
+        <img src="image2.jpg" alt="Image 3">
+        <img src="image3.jpg" alt="Image 4">
+
+        <!-- Add more images here -->
+    </div>
+</section>
+
+<section class="featured-products" style="background-image: url('background2.jpg');">
+    <section>
+        <div class="customization-dropdown">
+            <button class="dropdown-btn"><i class="fas fa-paint-brush"></i> Customize Your Flavor!</button>
+            <div class="dropdown-content">
+                <a href="custom1.html">Ice-Cream</a>
+                <a href="custom2.html">Drinks</a>
+                <a href="custom3.html">Waffles</a>
+                <a href="custom4.html">Cakes</a>
+            </div>
+        </div>
+    </section>
+    
+    <h2>Our Best Sellers!</h2>
+    <div class="products">
+        <div class="product">
+            <a href="product1.html"><img src="vanilla.jpg" alt="Vanilla Ice Cream">
+            <h3>Vanilla Ice Cream</h3>
+            <p>A classic favorite</p>
+            <button class="add-to-cart-btn">Add to Cart</button></a>
+        </div>
+        <div class="product">
+            <a href="product2.html"><img src="chocolatewaffle.jpg" alt="Chocolate Waffle">
+            <h3>Chocolate waffle</h3>
+            <p>Indulge in chocolate goodness</p>
+            <button class="add-to-cart-btn">Add to Cart</button></a>
+        </div>
+        <div class="product">
+            <a href="product3.html"><img src="strawberrysmoothie.jpg" alt="Strawberry Smoothie">
+            <h3>Strawberry Smoothie</h3>
+            <p>mouth freshing treat</p>
+            <button class="add-to-cart-btn">Add to Cart</button></a>
+        </div>
+        <div class="product">
+            <a href="product4.html"><img src="cookies.jpg" alt="Cookies n Cream">
+            <h3>cookies n Cream</h3>
+            <p>A classic funky treat</p>
+            <button class="add-to-cart-btn">Add to Cart</button></a>
+        </div>
+        <div class="product">
+            <a href="product5.html"><img src="mintchoco.jpg" alt="Mint Chocolate Chip">
+            <h3>mint choco chip</h3>
+            <p>Indulge in minty coolness</p>
+            <button class="add-to-cart-btn">Add to Cart</button></a>
+        </div>
+        <div class="product">
+            <a href="product6.html"><img src="freshfruit.jpg" alt="Fresh Fruit">
+            <h3>fresh fruit</h3>
+            <p>summer best seller</p>
+            <button class="add-to-cart-btn">Add to Cart</button></a>
+        </div>
+    </div>
+</section>
+<section class="discount-offers">
+    <div class="offer-image">
+        <img src="discount_image.jpg" alt="Discount Image">
+        <div class="overlay-text">
+            <h2>FEEL THE SUMMER!</h2><br>
+            <h2>Special Offer!</h2>
+            <p>Get 20% off on all ice cream flavors this summer!</p>
+            <a href="product1.html"><button>Shop Now</button></a>
+        </div>
+    </div>
+</section>
+<section id="newsletter">
+    <div class="container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with the latest products and promotions. Join our community committed to sustainability!</p>
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>Contact us: contact@tastygelato.com</p><br>
+    <div>
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-user"></i>
+        <i class="fas fa-sign-in-alt"></i>
+    </div><br><br>
+    <div class="footer-content">
+        <div class="promo-section">
+            <div>
+                <h2>Free Shipping</h2>
+                <p>Sign up for updates and get free shipping!</p>
+            </div>
+            <div>
+                <h2>30 Minutes Delivery</h2>
+                <p>Everything you order will be quickly delivered.</p>
+            </div>
+            <div>
+                <h2>Best Quality Guarantee</h2>
+                <p>100% Fresh and best quality food provided!</p>
+            </div>
+        </div>
+        <div class="info-section">
+            <h2>Store Information</h2><br>
+                Tasty Gelato <br>
+                Ice Cream Store, Mumbai, Maharashtra<br> 
+                tastygelato@gmail.com<br>
+                +0112553253<br>
+                Help Line No: Call us 24/7:0987654321<br>
+        </div>
+        <div class="info-section">
+            <h2>Information</h2><br>
+            
+                About Us<br>
+                Delivery Information<br>
+                Privacy Policy<br>
+                Terms & Conditions<br>
+                Contact Us<br>
+                Site Map<br>
+            
+        </div>
+        <h3>Follow us on </h3><br><br>
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/scoopsicecreamindia/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FIceCream" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/icecream/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- Add more social media icons as needed -->
+        </div><BR><BR>      
+</footer>
+<footer><div class="container">
+    <p><hr><br>&copy; 2024 By Nikita Singh, Shahina Shaikh.<BR> All rights reserved.</p>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all add-to-cart buttons
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+    // Add event listener to each button
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default action of the button
+            
+            // Get product details
+            const product = this.closest('.product');
+            const productName = product.querySelector('h3').innerText;
+            const productPrice = product.querySelector('p').innerText;
+
+            // Add product to cart (This is just a placeholder, you'll need to implement actual cart logic)
+            addToCart(productName, productPrice);
+
+            // Redirect to checkout page
+            window.location.href = 'checkout.html';
+        });
+    });
+
+    // Function to add product to cart
+    function addToCart(name, price) {
+        // Placeholder function for adding product to cart
+        console.log('Added to cart:', name, price);
+        // Here you would implement the actual logic to add the product to the cart
+    }
+});
+</script>
+<script>
+    // Array to store product names
+    const productNames = [
+        "Vanilla Ice Cream",
+        "Chocolate Waffle",
+        "Strawberry Smoothie",
+        "Cookies n Cream",
+        "Mint Chocolate Chip",
+        "Fresh Fruit"
+        // Add more product names as needed
+    ];
+
+    function searchProducts() {
+        // Get user input
+        const userInput = document.getElementById("searchInput").value.toLowerCase();
+
+        // Filter products based on user input
+        const filteredProducts = productNames.filter(product => product.toLowerCase().includes(userInput));
+
+        // Display filtered products (You can replace this with your desired logic)
+        alert("Search Results: " + filteredProducts.join(", "));
+    }
+</script>
+<script src="script.js"></script> 
+</body>
+</html>

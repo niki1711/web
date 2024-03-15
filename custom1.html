@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Ice Cream</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Pastel blue */
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff9ff3; /* Pastel pink */
+        }
+
+        .option {
+            background-color: #ffeaa7; /* Pastel yellow */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .option h2 {
+            margin-bottom: 10px;
+            color: #34495e; /* Dark blue */
+        }
+
+        .option p {
+            color: #34495e; /* Dark blue */
+        }
+
+        .option ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .option li {
+            margin-bottom: 5px;
+        }
+
+        .checkbox-label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .customize-button,
+        .reset-button {
+            background-color: #55efc4; /* Pastel green */
+            color: #2d3436; /* Black */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+        .customize-button:hover,
+        .reset-button:hover {
+            background-color: #00b894; /* Darker pastel green */
+        }
+    </style>
+</head>
+<body style="background-image: url('background2.jpg'); background-size: cover;">
+    <!-- Your HTML content goes here -->
+</body>
+<body>
+    <div class="container">
+        <h1>Customize Your Ice Cream</h1>
+        
+        <div class="option">
+            <h2>Flavors</h2>
+            <p>Add your favorite flavors:</p>
+            <ul>
+                <li><label class="checkbox-label"><input type="checkbox"> Vanilla</label></li>
+                <li><label class="checkbox-label"><input type="checkbox"> Chocolate</label></li>
+                <li><label class="checkbox-label"><input type="checkbox"> Strawberry</label></li>
+                <li><label class="checkbox-label"><input type="checkbox"> Mint</label></li>
+                <!-- Add more flavors as needed -->
+            </ul>
+        </div>
+        
+        <div class="option">
+            <h2>Toppings</h2>
+            <p>Choose from a variety of toppings:</p>
+            <ul>
+                <li><label class="checkbox-label"><input type="checkbox"> Sprinkles</label></li>
+                <li><label class="checkbox-label"><input type="checkbox"> Chocolate chips</label></li>
+                <li><label class="checkbox-label"><input type="checkbox"> Nuts</label></li>
+                <li><label class="checkbox-label"><input type="checkbox"> Fruit syrup</label></li>
+                <!-- Add more toppings as needed -->
+            </ul>
+        </div>
+        
+        <div class="option">
+            <h2>Cones</h2>
+            <p>Choose your cone:</p>
+            <ul>
+                <li><label class="checkbox-label"><input type="radio" name="cone"> Waffle cone</label></li>
+                <li><label class="checkbox-label"><input type="radio" name="cone"> Sugar cone</label></li>
+                <li><label class="checkbox-label"><input type="radio" name="cone"> Cup</label></li>
+            </ul>
+        </div>
+
+        <div class="option">
+            <h2>Extras</h2>
+            <p>Add extra toppings:</p>
+            <ul>
+                <li><label class="checkbox-label"><input type="checkbox"> Whipped cream</label></li>
+                <li><label class="checkbox-label"><input type="checkbox"> Caramel sauce</label></li>
+                <li><label class="checkbox-label"><input type="checkbox"> Marshmallows</label></li>
+                <li><label class="checkbox-label"><input type="checkbox"> Brownie bites</label></li>
+                <!-- Add more extras as needed -->
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <button class="customize-button" onclick="customizeCake()">Customize Your Ice-Cream.</button>
+            <button class="reset-button">Reset</button>
+        </div>
+    </div>
+    <script>
+        function customizeCake() {
+            alert("Your customization is being processed! HAPPY EATING");
+            // Redirect to home page after clicking OK on the alert
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Link to Font Awesome for icons -->
+    <style>
+        /* Theme colors */
+        :root {
+            --primary-color: #ff80ab; /* Pastel pink */
+            --secondary-color: #ffd54f; /* Pastel yellow */
+            --text-color: #4fc3f7; /* Pastel blue */
+            --bg-color: #f4f4f4; /* Light grey */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+        header .search-bar input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+        header .search-bar button {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            color: #fff;
+            cursor: pointer;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+        .cart-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .cart-item {
+            border: 1px solid var(--text-color);
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .cart-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .item-details h2 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .item-details p {
+            margin: 5px 0;
+        }
+        .remove-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .cart-total {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .cart-total h2 {
+            margin-top: 10px;
+        }
+        .checkout-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove default underline */
+        }
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-image: url('background2.jpg'); background-size: cover;">
+    <!-- Your HTML content goes here -->
+</body>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Ice-scoop<span>.</span></a>
+            <div class="search-bar">
+                <input type="text" placeholder="Find your delight here...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="nav-item"><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li class="nav-item"><a href="cart.html"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+                <li class="nav-item"><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Shopping Cart</h1>
+        <div class="cart-items">
+            <!-- Cart items will be displayed here -->
+            <!-- Example item -->
+            <div class="cart-item">
+                <img src="vanilla.jpg" alt="Product Image">
+                <div class="item-details">
+                    <h2>VANILLA DELIGHT</h2>
+                    <p>Price: Rs.199</p>
+                    <p>Quantity: 2</p>
+                </div>
+                <button class="remove-btn"><i class="fas fa-trash"></i> Remove</button>
+            </div>
+        </div>
+        <div class="cart-total">
+            <h2>Total: <Rs class="199"></Rs></h2>
+            <a href="checkout.html" class="checkout-btn">Proceed to Checkout <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>

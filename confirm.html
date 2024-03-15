@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Payment</title>
+    <!-- Include SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <style>
+        /* Add your confirm page styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        .details p {
+            margin-bottom: 10px;
+        }
+        .confirm-btn {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff9999;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .confirm-btn:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body style="background-image: url('background2.jpg'); background-size: cover;">
+    <!-- Your HTML content goes here -->
+</body>
+<body>
+    <div class="container">
+        <h1>Confirm Payment</h1>
+        <div class="details">
+            <!-- Payment details received from payment.html -->
+            <p><strong>Card Number:</strong> 1234 5678 9012 3456</p>
+            <p><strong>Expiry Date:</strong> 12/25</p>
+            <p><strong>CVV:</strong> 123</p>
+            <p><strong>Cardholder's Name:</strong> John Doe</p>
+            <p><strong>Email Address:</strong> john@example.com</p>
+        </div>
+        <button class="confirm-btn" onclick="confirmPayment()">Complete Payment</button>
+    </div>
+    <!-- Include SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        function confirmPayment() {
+            // Add code here to handle payment confirmation
+            
+            // For demonstration purposes, let's show a confirmation message using SweetAlert2
+            Swal.fire({
+                icon: 'success',
+                title: 'Payment Confirmed!',
+                text: 'You will receive an email with the transaction details. Happy Shopping!',
+                confirmButtonText: 'OK',
+                customClass: {
+                    popup: 'swal2-popup-custom',
+                    icon: 'swal2-icon-custom',
+                }
+            }).then(() => {
+                // Redirect to the home page after confirming the payment
+                window.location.href = "index.html"; // Change "index.html" to the desired home page URL
+            });
+        }
+    </script>
+</body>
+</html>

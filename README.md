@@ -14,7 +14,10 @@ This project demonstrates a responsive UI for browsing food categories such as i
 ## Tech Stack
 - HTML  
 - CSS  
-- JavaScript  
+- JavaScript
+
+## Live Demo
+https://niki1711.github.io/web/
 
 ## Purpose
 This project was developed to practice frontend design and user interface development.
